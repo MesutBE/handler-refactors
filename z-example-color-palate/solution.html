@@ -24,12 +24,9 @@
       { name: 'fourth', args: ['white'], expected: 'background-color: white;' },
     ];
 
-    function colorToStyle(colorCode) {
-      return 'background-color: ' + colorCode + ';';
-    }
+    function colorToStyle(colorCode) { }
 
     testing(colorToStyle, colorToStyleTests);
-
   </script>
   <script id='handler'>
     function setColorHandler(event) {
@@ -39,7 +36,7 @@
       const newColor = form.selection.value;
 
       // execute core logic
-      const newStyle = colorToStyle(newColor);
+      const newStyle = 'background-color: ' + newColor + ';';
 
       // display results to user
       document.body.style = newStyle;
