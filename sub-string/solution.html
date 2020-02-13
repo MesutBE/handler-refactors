@@ -21,7 +21,11 @@
       { name: 'fifth', args: ['everafter', -1, 2], expected: 'r' },
     ];
 
-    function getPartialString(str, beginIndex, endIndex) { }
+    function getPartialString(str, beginIndex, endIndex) {
+        const result = str.substr(beginIndex, endIndex);
+
+        return result;
+     }
 
     testing(getPartialString, getPartialStringTests);
   </script>
@@ -38,7 +42,7 @@
       const end = Number(preEnd);
 
       // execute core logic
-      const result = userString.substr(start, end);
+      const result = getPartialString(userString, start, end);
 
       // communicate result to user
       document.getElementById('program-output').innerHTML = result;
