@@ -25,11 +25,12 @@
     ];
 
     function colorToStyle(colorCode) {
-      return 'background-color: ' + colorCode + ';';
-    }
+      const newStyle = 'background-color: ' + colorCode + ';';
+
+      return newStyle;
+     }
 
     testing(colorToStyle, colorToStyleTests);
-
   </script>
   <script id='handler'>
     function setColorHandler(event) {
